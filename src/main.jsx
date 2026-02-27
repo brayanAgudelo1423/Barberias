@@ -7,7 +7,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* import.meta.env.BASE_URL será '/' en local y '/Barberias/' en GitHub Pages */}
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <BookingProvider>
         <App />
       </BookingProvider>
